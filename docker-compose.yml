@@ -1,0 +1,45 @@
+# services:
+#   postgres:
+#     image: postgres:17
+#     container_name: resolveai-postgres
+
+#     environment:
+#       POSTGRES_DB: resolveai
+#       POSTGRES_USER: resolveai
+#       POSTGRES_PASSWORD: resolveai_dev_password
+
+#     ports:
+#       - "5432:5432"
+
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data
+
+#     healthcheck:
+#       test: ["CMD-SHELL", "pg_isready -U resolveai -d resolveai"]
+#       interval: 5s
+#       timeout: 5s
+#       retries: 5
+
+# volumes:
+#   postgres_data:
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: resolveai-postgres
+    environment:
+      POSTGRES_USER: resolveai
+      POSTGRES_PASSWORD: resolveai_dev_password
+      POSTGRES_DB: resolveai
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U resolveai -d resolveai"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

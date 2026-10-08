@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ruff / mypy
+.ruff_cache/
+.mypy_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Logs
+*.log
+
+# Local database / data
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker / PostgreSQL local data
+postgres_data/
+pgdata/
+
+# Chroma / vector databases
+chroma_db/
+db/chroma_db/
+
+# Python cache
+.pytest_cache/
